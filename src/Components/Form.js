@@ -1,11 +1,9 @@
-
 import React from 'react';
-
 
 const Form = (props) => {
 
     const onChange = evt => {
-        const { name, value } = evt.target
+        const { name, value } = evt.target;
         props.change(name, value);
     }
 

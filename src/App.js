@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-
 import Form from './Components/Form';
 
 function App() {
   // Create state variables to hold team members
   const [members, setMembers] = useState([]);
-  const [values, setValues] = useState({ name: '', email: '', role: '' })
+  const [values, setValues] = useState({ name: '', email: '', role: '' });
   // Create update and submit functions
 
   const onSubmit = () => {
-    setMembers([values, ...members])
-    setValues({ name: '', email: '', role: '' })
+    setMembers([values, ...members]);
+    setValues({ name: '', email: '', role: '' });
   }
+
   const onChange = (name, value) => {
-    setValues({ ...values, [name]: value })
+    setValues({ ...values, [name]: value });
   }
 
   return (
