@@ -1,11 +1,12 @@
+
 import React from 'react';
 
 
-export default function Form(props) {
+const Form = (props) => {
 
     const onChange = evt => {
         const { name, value } = evt.target
-        props.change(name, value)
+        props.change(name, value);
     }
 
     const onSubmit = evt => {
@@ -13,20 +14,18 @@ export default function Form(props) {
         props.submit();
     }
 
-    <form onSubmit={onSubmit}>
+    return (<form onSubmit={onSubmit}>
         <label>Name
             <input
                 placeholder='Enter Name'
-                type='text'
                 name='name'
                 value={props.values.name}
                 onChange={onChange}
             />
-        </label>Email
-        <label>
+        </label>
+        <label>Email
             <input
                 placeholder='Enter Email'
-                type='email'
                 name='email'
                 value={props.values.email}
                 onChange={onChange}
@@ -35,13 +34,14 @@ export default function Form(props) {
         <label>Role
             <input
                 placeholder='Enter Role'
-                type='text'
                 name='role'
-                value={props.values.name}
+                value={props.values.role}
                 onChange={onChange}
             />
         </label>
         <input type='submit' value='Create Your Team' />
     </form>
-
+    )
 }
+
+export default Form;
